@@ -11,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Modal functionality
     const modalOverlay = document.getElementById('modal-overlay');
-    const projectModal = document.getElementById('project-modal');
     const modalTitle = document.getElementById('modal-title');
     const modalContent = document.getElementById('modal-content');
     const closeModal = document.getElementById('close-modal');
@@ -155,36 +154,57 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Open modal with project details
     function openModal(projectId) {
+        console.log('Opening modal for project:', projectId);
         if (projectData[projectId]) {
             modalTitle.textContent = projectData[projectId].title;
             modalContent.innerHTML = projectData[projectId].description;
             modalOverlay.classList.remove('hidden');
+            modalOverlay.style.display = 'flex';
             document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+        } else {
+            console.error('No project data found for ID:', projectId);
         }
     }
     
     // Close modal
     function closeModalFunc() {
+        console.log('Closing modal');
         modalOverlay.classList.add('hidden');
+        modalOverlay.style.display = 'none';
         document.body.style.overflow = ''; // Re-enable scrolling
     }
     
     // Add event listeners to view details buttons
-    if (viewDetailsButtons && modalOverlay) {
+    if (viewDetailsButtons && viewDetailsButtons.length > 0 && modalOverlay) {
+        console.log('Found', viewDetailsButtons.length, 'detail buttons');
         viewDetailsButtons.forEach(button => {
-            button.addEventListener('click', function() {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
                 const projectCard = this.closest('.project-card');
                 if (projectCard) {
                     const projectId = projectCard.getAttribute('data-project-id');
+                    console.log('Clicked on project:', projectId);
                     openModal(projectId);
+                } else {
+                    console.error('Could not find parent project card');
                 }
             });
+        });
+    } else {
+        console.error('Modal elements not found:', {
+            viewDetailsButtons: viewDetailsButtons ? viewDetailsButtons.length : 'not found',
+            modalOverlay: !!modalOverlay
         });
     }
     
     // Close modal when clicking the close button
     if (closeModal) {
-        closeModal.addEventListener('click', closeModalFunc);
+        closeModal.addEventListener('click', function(e) {
+            e.preventDefault();
+            closeModalFunc();
+        });
+    } else {
+        console.error('Close modal button not found');
     }
     
     // Close modal when clicking outside the modal content
@@ -198,7 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Close modal with Escape key
     document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
+        if (e.key === 'Escape' && modalOverlay && !modalOverlay.classList.contains('hidden')) {
             closeModalFunc();
         }
     });
@@ -226,6 +246,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+    
+    // Contact Form Validation
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form validation and submission logic would go here
+            alert('Thank you for your message! I will get back to you soon.');
+            contactForm.reset();
+        });
+    }
 });
 
 // Contact Form Validation
