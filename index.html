@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .tech-name {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .tech-item:hover .tech-name {
+            opacity: 1;
+        }
+    </style>
 </head>
 <body class="bg-dark text-gray-200">
     <!-- Header/Navigation -->
@@ -151,101 +160,137 @@
         <div class="max-w-4xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 text-center">Technologies I have worked with</h2>
             
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
+                <!-- Java -->
+                <div class="tech-item">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">Java</span>
+                            </div>
+                            <span class="tech-name">Java</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Python -->
+                <div class="tech-item">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <i class="fab fa-python text-xl"></i>
+                            </div>
+                            <span class="tech-name">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- C -->
+                <div class="tech-item">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">C</span>
+                            </div>
+                            <span class="tech-name">C</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- C++ -->
+                <div class="tech-item">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">C++</span>
+                            </div>
+                            <span class="tech-name">C++</span>
+                        </div>
+                    </div>
+                </div>
+                
                 <!-- JavaScript -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <span class="text-xl font-bold">JS</span>
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">JS</span>
                             </div>
-                            <p class="mt-3 text-sm">JavaScript</p>
+                            <span class="tech-name">JavaScript</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- TypeScript -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <span class="text-xl font-bold">TS</span>
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">TS</span>
                             </div>
-                            <p class="mt-3 text-sm">TypeScript</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Vue.js -->
-                <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <i class="fab fa-vuejs text-2xl"></i>
-                            </div>
-                            <p class="mt-3 text-sm">Vue.js</p>
+                            <span class="tech-name">TypeScript</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- React -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <i class="fab fa-react text-2xl"></i>
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <i class="fab fa-react text-xl"></i>
                             </div>
-                            <p class="mt-3 text-sm">React</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Node.js -->
-                <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <i class="fab fa-node-js text-2xl"></i>
-                            </div>
-                            <p class="mt-3 text-sm">Node.js</p>
+                            <span class="tech-name">React</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Tailwind -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/>
                                 </svg>
                             </div>
-                            <p class="mt-3 text-sm">Tailwind</p>
+                            <span class="tech-name">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SQL -->
+                <div class="tech-item">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <span class="text-lg font-bold">SQL</span>
+                            </div>
+                            <span class="tech-name">SQL</span>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Git -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <i class="fab fa-git-alt text-2xl"></i>
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <i class="fab fa-git-alt text-xl"></i>
                             </div>
-                            <p class="mt-3 text-sm">Git</p>
+                            <span class="tech-name">Git</span>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Figma -->
+                <!-- Node.js -->
                 <div class="tech-item">
-                    <div class="bg-gray-dark p-4 rounded-lg flex items-center justify-center">
+                    <div class="bg-gray-dark p-3 rounded-lg flex items-center justify-center">
                         <div class="text-center">
-                            <div class="bg-gray-600 w-16 h-16 flex items-center justify-center rounded-lg mx-auto">
-                                <i class="fab fa-figma text-2xl"></i>
+                            <div class="bg-gray-600 w-12 h-12 flex items-center justify-center rounded-lg mx-auto">
+                                <i class="fab fa-node-js text-xl"></i>
                             </div>
-                            <p class="mt-3 text-sm">Figma</p>
+                            <span class="tech-name">Node.js</span>
                         </div>
                     </div>
                 </div>
