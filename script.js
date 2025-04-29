@@ -33,7 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'placeholder4': 'Placeholder Project 4',
         'placeholder5': 'Placeholder Project 5',
         'placeholder6': 'Placeholder Project 6',
-        'placeholder7': 'Placeholder Project 7'
+        'placeholder7': 'Placeholder Project 7',
+        'ucfk4-pong': 'UCFK4 Pong'
     };
     
     function openModal(projectId) {
