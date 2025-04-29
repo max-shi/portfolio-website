@@ -20,7 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectData = {
         'ecommerce': {
             title: 'E-commerce Platform',
+            images: [
+                'images/projects/ecommerce/main.png',
+                'images/projects/ecommerce/dashboard.png',
+                'images/projects/ecommerce/checkout.png'
+            ],
             description: `
+                <div class="mb-6 project-gallery">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="images/projects/ecommerce/main.png" alt="E-commerce Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ecommerce/dashboard.png" alt="E-commerce Dashboard" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ecommerce/checkout.png" alt="E-commerce Checkout" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
                 <p class="mb-4">A comprehensive e-commerce solution built with modern web technologies. This platform offers a seamless shopping experience with features like:</p>
                 <ul class="list-disc pl-5 mb-4 space-y-2">
                     <li>User authentication and profile management</li>
@@ -55,7 +67,19 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'portfolio': {
             title: 'Portfolio Website',
+            images: [
+                'images/projects/portfolio/main.png',
+                'images/projects/portfolio/projects.png',
+                'images/projects/portfolio/contact.png'
+            ],
             description: `
+                <div class="mb-6 project-gallery">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="images/projects/portfolio/main.png" alt="Portfolio Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/portfolio/projects.png" alt="Portfolio Projects" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/portfolio/contact.png" alt="Portfolio Contact" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
                 <p class="mb-4">A modern, responsive portfolio website designed to showcase my projects and skills. Key features include:</p>
                 <ul class="list-disc pl-5 mb-4 space-y-2">
                     <li>Responsive design that works on all devices</li>
@@ -86,7 +110,19 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'weather': {
             title: 'Weather Dashboard',
+            images: [
+                'images/projects/weather/main.png',
+                'images/projects/weather/forecast.png',
+                'images/projects/weather/map.png'
+            ],
             description: `
+                <div class="mb-6 project-gallery">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="images/projects/weather/main.png" alt="Weather Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/weather/forecast.png" alt="Weather Forecast" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/weather/map.png" alt="Weather Map" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
                 <p class="mb-4">An interactive weather application that provides current conditions and forecasts for locations worldwide. Features include:</p>
                 <ul class="list-disc pl-5 mb-4 space-y-2">
                     <li>Current weather conditions with visual indicators</li>
@@ -119,7 +155,19 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'task': {
             title: 'Task Manager',
+            images: [
+                'images/projects/task/main.png',
+                'images/projects/task/board.png',
+                'images/projects/task/settings.png'
+            ],
             description: `
+                <div class="mb-6 project-gallery">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <img src="images/projects/task/main.png" alt="Task Manager Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/task/board.png" alt="Task Manager Board" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/task/settings.png" alt="Task Manager Settings" class="w-full h-auto rounded-lg">
+                    </div>
+                </div>
                 <p class="mb-4">A productivity application for managing tasks and projects with a focus on simplicity and user experience. Key features:</p>
                 <ul class="list-disc pl-5 mb-4 space-y-2">
                     <li>Drag-and-drop interface for organizing tasks</li>
@@ -195,6 +243,28 @@ document.addEventListener('DOMContentLoaded', function() {
             viewDetailsButtons: viewDetailsButtons ? viewDetailsButtons.length : 'not found',
             modalOverlay: !!modalOverlay
         });
+    }
+    
+    // Add event listeners to project images
+    const projectImages = document.querySelectorAll('.project-card img');
+    if (projectImages && projectImages.length > 0) {
+        console.log('Found', projectImages.length, 'project images');
+        projectImages.forEach(image => {
+            image.addEventListener('click', function() {
+                const projectCard = this.closest('.project-card');
+                if (projectCard) {
+                    const projectId = projectCard.getAttribute('data-project-id');
+                    console.log('Image clicked for project:', projectId);
+                    openModal(projectId);
+                } else {
+                    console.error('Could not find parent project card');
+                }
+            });
+            // Add cursor pointer to indicate clickable
+            image.style.cursor = 'pointer';
+        });
+    } else {
+        console.error('No project images found');
     }
     
     // Close modal when clicking the close button
