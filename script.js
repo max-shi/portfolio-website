@@ -18,19 +18,19 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Project data
     const projectData = {
-        'ecommerce': {
-            title: 'E-commerce Platform',
+        'ai-helper': {
+            title: 'Ai Helper Application',
             images: [
-                'images/projects/project1.png',
-                'images/projects/ecommerce/dashboard.png',
-                'images/projects/ecommerce/checkout.png'
+                'images/projects/ai-helper-program/ai-helper-application-prompt-builder.png',
+                'images/projects/ai-helper-program/ai-helper-application-summary-creator.png',
+                'images/projects/ai-helper-program/ai-helper-application-summary-creator-compare.png'
             ],
             description: `
                 <div class="mb-6 project-gallery">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/project1.png" alt="Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ecommerce/dashboard.png" alt="Dashboard" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ecommerce/checkout.png" alt="Checkout" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ai-helper-program/ai-helper-application-prompt-builder.png" alt="Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ai-helper-program/ai-helper-application-summary-creator.png" alt="Dashboard" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ai-helper-program/ai-helper-application-summary-creator-compare.png" alt="Checkout" class="w-full h-auto rounded-lg">
                     </div>
                 </div>
                 <p class="mb-4">A comprehensive e-commerce solution built with modern web technologies.</p>
