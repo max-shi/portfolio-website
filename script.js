@@ -16,46 +16,30 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('close-modal');
     const viewDetailsButtons = document.querySelectorAll('.view-details');
     
-    // Project data - this could be moved to a separate JSON file in a real project
+    // Project data
     const projectData = {
         'ecommerce': {
             title: 'E-commerce Platform',
             images: [
-                'images/projects/ecommerce/main.png',
+                'images/projects/project1.png',
                 'images/projects/ecommerce/dashboard.png',
                 'images/projects/ecommerce/checkout.png'
             ],
             description: `
                 <div class="mb-6 project-gallery">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/ecommerce/main.png" alt="E-commerce Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ecommerce/dashboard.png" alt="E-commerce Dashboard" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ecommerce/checkout.png" alt="E-commerce Checkout" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/project1.png" alt="Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ecommerce/dashboard.png" alt="Dashboard" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/ecommerce/checkout.png" alt="Checkout" class="w-full h-auto rounded-lg">
                     </div>
                 </div>
-                <p class="mb-4">A comprehensive e-commerce solution built with modern web technologies. This platform offers a seamless shopping experience with features like:</p>
+                <p class="mb-4">A comprehensive e-commerce solution built with modern web technologies.</p>
                 <ul class="list-disc pl-5 mb-4 space-y-2">
                     <li>User authentication and profile management</li>
-                    <li>Product catalog with filtering and search capabilities</li>
-                    <li>Shopping cart and wishlist functionality</li>
+                    <li>Product catalog with filtering and search</li>
                     <li>Secure checkout process with multiple payment options</li>
-                    <li>Order tracking and history</li>
-                    <li>Admin dashboard for inventory and order management</li>
                 </ul>
-                <p class="mb-4">The frontend is built with React and styled with Tailwind CSS, while the backend uses Node.js with Express and MongoDB for data storage.</p>
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold mb-3">Technologies Used</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Redux</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Node.js</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Express</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">MongoDB</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Stripe API</span>
-                    </div>
-                </div>
-                <div class="mt-4 flex space-x-4">
+                <div class="mt-6 flex space-x-4">
                     <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                         <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                     </a>
@@ -75,30 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
             description: `
                 <div class="mb-6 project-gallery">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/portfolio/main.png" alt="Portfolio Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/portfolio/projects.png" alt="Portfolio Projects" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/portfolio/contact.png" alt="Portfolio Contact" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/portfolio/main.png" alt="Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/portfolio/projects.png" alt="Projects" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/portfolio/contact.png" alt="Contact" class="w-full h-auto rounded-lg">
                     </div>
                 </div>
-                <p class="mb-4">A modern, responsive portfolio website designed to showcase my projects and skills. Key features include:</p>
-                <ul class="list-disc pl-5 mb-4 space-y-2">
-                    <li>Responsive design that works on all devices</li>
-                    <li>Smooth scrolling and animations</li>
-                    <li>Project showcase with modal details</li>
-                    <li>Skills and technologies section</li>
-                    <li>Contact form with validation</li>
-                </ul>
-                <p class="mb-4">Built with HTML, CSS, and JavaScript, with Tailwind CSS for styling and a touch of custom CSS for animations.</p>
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold mb-3">Technologies Used</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">HTML</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">CSS</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">JavaScript</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-                    </div>
-                </div>
-                <div class="mt-4 flex space-x-4">
+                <p class="mb-4">A modern, responsive portfolio designed to showcase projects and skills.</p>
+                <div class="mt-6 flex space-x-4">
                     <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                         <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                     </a>
@@ -118,32 +85,13 @@ document.addEventListener('DOMContentLoaded', function() {
             description: `
                 <div class="mb-6 project-gallery">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/weather/main.png" alt="Weather Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/weather/forecast.png" alt="Weather Forecast" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/weather/map.png" alt="Weather Map" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/weather/main.png" alt="Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/weather/forecast.png" alt="Forecast" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/weather/map.png" alt="Map" class="w-full h-auto rounded-lg">
                     </div>
                 </div>
-                <p class="mb-4">An interactive weather application that provides current conditions and forecasts for locations worldwide. Features include:</p>
-                <ul class="list-disc pl-5 mb-4 space-y-2">
-                    <li>Current weather conditions with visual indicators</li>
-                    <li>5-day forecast with hourly breakdowns</li>
-                    <li>Interactive maps showing weather patterns</li>
-                    <li>Location search with autocomplete</li>
-                    <li>Save favorite locations for quick access</li>
-                    <li>Historical weather data visualization</li>
-                </ul>
-                <p class="mb-4">The app uses JavaScript to fetch data from a weather API and Chart.js to visualize temperature and precipitation trends.</p>
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold mb-3">Technologies Used</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">JavaScript</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">OpenWeather API</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Chart.js</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Mapbox API</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Local Storage</span>
-                    </div>
-                </div>
-                <div class="mt-4 flex space-x-4">
+                <p class="mb-4">Interactive weather app with 5-day forecasts and maps.</p>
+                <div class="mt-6 flex space-x-4">
                     <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                         <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                     </a>
@@ -163,32 +111,147 @@ document.addEventListener('DOMContentLoaded', function() {
             description: `
                 <div class="mb-6 project-gallery">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/task/main.png" alt="Task Manager Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/task/board.png" alt="Task Manager Board" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/task/settings.png" alt="Task Manager Settings" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/task/main.png" alt="Main" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/task/board.png" alt="Board" class="w-full h-auto rounded-lg">
+                        <img src="images/projects/task/settings.png" alt="Settings" class="w-full h-auto rounded-lg">
                     </div>
                 </div>
-                <p class="mb-4">A productivity application for managing tasks and projects with a focus on simplicity and user experience. Key features:</p>
-                <ul class="list-disc pl-5 mb-4 space-y-2">
-                    <li>Drag-and-drop interface for organizing tasks</li>
-                    <li>Project categorization and filtering</li>
-                    <li>Task prioritization and deadline management</li>
-                    <li>Progress tracking with visual indicators</li>
-                    <li>User authentication and data synchronization</li>
-                    <li>Dark/light theme toggle</li>
-                </ul>
-                <p class="mb-4">Built with React for the frontend, Firebase for authentication and real-time database, and styled with Tailwind CSS.</p>
-                <div class="mt-6">
-                    <h3 class="text-xl font-semibold mb-3">Technologies Used</h3>
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">React</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Firebase</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">React DnD</span>
-                        <span class="bg-dark px-3 py-1 rounded-full text-sm">Context API</span>
-                    </div>
+                <p class="mb-4">A productivity app for managing tasks with drag-and-drop and theming.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
                 </div>
-                <div class="mt-4 flex space-x-4">
+            `
+        },
+        // Placeholder entries
+        'placeholder1': {
+            title: 'Placeholder Project 1',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 1.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder2': {
+            title: 'Placeholder Project 2',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 2.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder3': {
+            title: 'Placeholder Project 3',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 3.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder4': {
+            title: 'Placeholder Project 4',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 4.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder5': {
+            title: 'Placeholder Project 5',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 5.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder6': {
+            title: 'Placeholder Project 6',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 6.</p>
+                <div class="mt-6 flex space-x-4">
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
+                    </a>
+                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
+                        <i class="fab fa-github mr-1"></i> Source Code
+                    </a>
+                </div>
+            `
+        },
+        'placeholder7': {
+            title: 'Placeholder Project 7',
+            images: [
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png',
+                'images/projects/placeholder.png'
+            ],
+            description: `
+                <p class="mb-4">Description for placeholder project 7.</p>
+                <div class="mt-6 flex space-x-4">
                     <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                         <i class="fas fa-external-link-alt mr-1"></i> Live Demo
                     </a>
@@ -200,205 +263,119 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     
-    // Open modal with project details
     function openModal(projectId) {
-        console.log('Opening modal for project:', projectId);
         if (projectData[projectId]) {
             modalTitle.textContent = projectData[projectId].title;
             modalContent.innerHTML = projectData[projectId].description;
             modalOverlay.classList.remove('hidden');
             modalOverlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+            document.body.style.overflow = 'hidden';
         } else {
-            console.error('No project data found for ID:', projectId);
+            console.error('No project data for:', projectId);
         }
     }
-    
-    // Close modal
+
     function closeModalFunc() {
-        console.log('Closing modal');
         modalOverlay.classList.add('hidden');
         modalOverlay.style.display = 'none';
-        document.body.style.overflow = ''; // Re-enable scrolling
+        document.body.style.overflow = '';
     }
-    
-    // Add event listeners to view details buttons
-    if (viewDetailsButtons && viewDetailsButtons.length > 0 && modalOverlay) {
-        console.log('Found', viewDetailsButtons.length, 'detail buttons');
-        viewDetailsButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                const projectCard = this.closest('.project-card');
-                if (projectCard) {
-                    const projectId = projectCard.getAttribute('data-project-id');
-                    console.log('Clicked on project:', projectId);
-                    openModal(projectId);
-                } else {
-                    console.error('Could not find parent project card');
-                }
-            });
+
+    viewDetailsButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const projectId = this.closest('.project-card').getAttribute('data-project-id');
+            openModal(projectId);
         });
-    } else {
-        console.error('Modal elements not found:', {
-            viewDetailsButtons: viewDetailsButtons ? viewDetailsButtons.length : 'not found',
-            modalOverlay: !!modalOverlay
+    });
+
+    document.querySelectorAll('.project-card img').forEach(image => {
+        image.style.cursor = 'pointer';
+        image.addEventListener('click', function() {
+            const projectId = this.closest('.project-card').getAttribute('data-project-id');
+            openModal(projectId);
         });
-    }
-    
-    // Add event listeners to project images
-    const projectImages = document.querySelectorAll('.project-card img');
-    if (projectImages && projectImages.length > 0) {
-        console.log('Found', projectImages.length, 'project images');
-        projectImages.forEach(image => {
-            image.addEventListener('click', function() {
-                const projectCard = this.closest('.project-card');
-                if (projectCard) {
-                    const projectId = projectCard.getAttribute('data-project-id');
-                    console.log('Image clicked for project:', projectId);
-                    openModal(projectId);
-                } else {
-                    console.error('Could not find parent project card');
-                }
-            });
-            // Add cursor pointer to indicate clickable
-            image.style.cursor = 'pointer';
-        });
-    } else {
-        console.error('No project images found');
-    }
-    
-    // Close modal when clicking the close button
+    });
+
     if (closeModal) {
-        closeModal.addEventListener('click', function(e) {
+        closeModal.addEventListener('click', (e) => {
             e.preventDefault();
             closeModalFunc();
         });
-    } else {
-        console.error('Close modal button not found');
     }
-    
-    // Close modal when clicking outside the modal content
+
     if (modalOverlay) {
-        modalOverlay.addEventListener('click', function(e) {
-            if (e.target === modalOverlay) {
-                closeModalFunc();
-            }
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModalFunc();
         });
     }
-    
-    // Close modal with Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && modalOverlay && !modalOverlay.classList.contains('hidden')) {
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
             closeModalFunc();
         }
     });
-    
+
     // Navigation active state
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
-    
     window.addEventListener('scroll', () => {
         let current = '';
-        
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
             if (window.pageYOffset >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
-        
         navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
+            link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+        });
+    });
+
+    // Contact form
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const message = document.getElementById('message').value.trim();
+        if (!name || !email || !subject || !message) {
+            alert('Please fill in all fields');
+            return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+        }
+        alert('Message sent successfully!');
+        contactForm.reset();
+    });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) window.scrollTo({ top: target.offsetTop - 70, behavior: 'smooth' });
+        });
+    });
+
+    // Animate on scroll
+    const animateOnScroll = () => {
+        document.querySelectorAll('.tech-item, .project-card').forEach(el => {
+            if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
             }
         });
+    };
+    document.querySelectorAll('.tech-item, .project-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
-    
-    // Contact Form Validation
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Form validation and submission logic would go here
-            alert('Thank you for your message! I will get back to you soon.');
-            contactForm.reset();
-        });
-    }
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
 });
-
-// Contact Form Validation
-const contactForm = document.getElementById('contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form values
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const message = document.getElementById('message').value.trim();
-    
-    // Simple validation
-    if (name === '' || email === '' || subject === '' || message === '') {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    // Email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-        alert('Please enter a valid email address');
-        return;
-    }
-    
-    // If validation passes, you would typically send the form data to a server
-    // For this demo, we'll just show a success message
-    alert('Message sent successfully!');
-    contactForm.reset();
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 70, // Offset for fixed header
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Add animation on scroll
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.tech-item, .project-card');
-    
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-        
-        if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
-};
-
-// Set initial styles for animation
-document.querySelectorAll('.tech-item, .project-card').forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-});
-
-// Run animation on page load and scroll
-window.addEventListener('load', animateOnScroll);
-window.addEventListener('scroll', animateOnScroll);
