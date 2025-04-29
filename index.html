@@ -657,18 +657,28 @@
                 </a>
             </div>
         </template>
-        
+
         <!-- OpenGL conveyor simulator -->
         <template id="project-template-opengl-conveyor-simulator">
             <div class="mb-6 project-gallery">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wide-view.png" alt="Placeholder" class="w-full h-auto rounded-lg">
-                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-fire-blaster.png" alt="Placeholder" class="w-full h-auto rounded-lg">
-                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wireframe-1.png" alt="Placeholder" class="w-full h-auto rounded-lg">
-                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wide-view-back.png" alt="Placeholder" class="w-full h-auto rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wide-view.png" alt="Wide view" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-fire-blaster.png" alt="Fire blaster" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wireframe-1.png" alt="Wireframe mode" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-wide-view-back.png" alt="Back view" class="w-full h-auto rounded-lg">
                 </div>
             </div>
-            <p class="mb-4">Description for placeholder project 2.</p>
+            <h3 class="text-xl font-bold mb-2">Assembly Line Simulation (2025)</h3>
+            <p class="text-gray-light mb-4">C++, OpenGL (FreeGLUT/GLU), GLUT</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Real-time 3D factory scene simulation built in C++ using OpenGL's fixed-function pipeline and FreeGLUT for cross-platform windowing and input.</li>
+                <li>Configures ambient, diffuse, and specular lighting with depth testing and perspective projection (glFrustum) for an immersive industrial environment.</li>
+                <li>Animated conveyor belt with continuous offset, rotating rollers, and looping via modulo arithmetic to simulate an endless production line; belt speed adjustable via keyboard controls.</li>
+                <li>Modular rendering of factory components—springs, presses, silos, kilns, packers, and skybox—each textured with TGA-loaded materials (concrete, metal, brick).</li>
+                <li>High-performance particle system for sparks and fire effects: particles follow gravity, bounce on collision, fade on expiry, with proximity-triggered sparks and randomized fire-blaster emissions.</li>
+                <li>Real-time shadow projection computed per frame against the ground plane to render semi-transparent silhouettes, simulating shadows without shader code.</li>
+                <li>Interactive camera and simulation controls: WASD + arrow keys for movement and look, toggle wireframe mode, and adjust belt parameters on the fly.</li>
+            </ul>
             <div class="mt-6 flex space-x-4">
                 <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                     <i class="fas fa-external-link-alt mr-1"></i> Live Demo
@@ -678,6 +688,7 @@
                 </a>
             </div>
         </template>
+
 
         <template id="project-template-placeholder3">
             <div class="mb-6 project-gallery">
