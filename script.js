@@ -333,25 +333,35 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Contact form
-    const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value.trim();
-        const message = document.getElementById('message').value.trim();
-        if (!name || !email || !subject || !message) {
-            alert('Please fill in all fields');
-            return;
-        }
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            alert('Please enter a valid email address');
-            return;
-        }
+  const contactForm = document.getElementById('contact-form');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    // Basic validation
+    const name    = this.name.value.trim();
+    const email   = this.email.value.trim();
+    const subject = this.subject.value.trim();
+    const message = this.message.value.trim();
+    if (!name || !email || !subject || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address');
+      return;
+    }
+
+    // Send the form via EmailJS
+    emailjs.sendForm('service_2zih2zg', 'template_8tzl9se', this)
+      .then(() => {
         alert('Message sent successfully!');
         contactForm.reset();
-    });
+      }, (err) => {
+        console.error('EmailJS error:', err);
+        alert('Oops—something went wrong. Please try again later.');
+      });
+  });
 
     // Smooth scrolling
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
