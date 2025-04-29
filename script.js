@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeModal = document.getElementById('close-modal');
     const viewDetailsButtons = document.querySelectorAll('.view-details');
     
+    // Fullscreen image functionality
+    const fullscreenOverlay = document.getElementById('fullscreen-overlay');
+    const fullscreenImage = document.getElementById('fullscreen-image');
+    const closeFullscreen = document.getElementById('close-fullscreen');
+    
     // Project data
     const projectData = {
         'ai-helper': {
@@ -270,9 +275,30 @@ document.addEventListener('DOMContentLoaded', function() {
             modalOverlay.classList.remove('hidden');
             modalOverlay.style.display = 'flex';
             document.body.style.overflow = 'hidden';
+            
+            // Add click event listeners to all images in the modal
+            setTimeout(() => {
+                document.querySelectorAll('#modal-content .project-gallery img').forEach(img => {
+                    img.style.cursor = 'zoom-in';
+                    img.addEventListener('click', function() {
+                        openFullscreenImage(this.src);
+                    });
+                });
+            }, 100); // Small timeout to ensure DOM is updated
         } else {
             console.error('No project data for:', projectId);
         }
+    }
+
+    function openFullscreenImage(imageSrc) {
+        fullscreenImage.src = imageSrc;
+        fullscreenOverlay.classList.remove('hidden');
+        fullscreenOverlay.style.display = 'flex';
+    }
+
+    function closeFullscreenFunc() {
+        fullscreenOverlay.classList.add('hidden');
+        fullscreenOverlay.style.display = 'none';
     }
 
     function closeModalFunc() {
@@ -304,15 +330,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    if (closeFullscreen) {
+        closeFullscreen.addEventListener('click', (e) => {
+            e.preventDefault();
+            closeFullscreenFunc();
+        });
+    }
+
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
             if (e.target === modalOverlay) closeModalFunc();
         });
     }
 
+    if (fullscreenOverlay) {
+        fullscreenOverlay.addEventListener('click', (e) => {
+            if (e.target === fullscreenOverlay) closeFullscreenFunc();
+        });
+    }
+
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && !modalOverlay.classList.contains('hidden')) {
-            closeModalFunc();
+        if (e.key === 'Escape') {
+            if (!fullscreenOverlay.classList.contains('hidden')) {
+                closeFullscreenFunc();
+            } else if (!modalOverlay.classList.contains('hidden')) {
+                closeModalFunc();
+            }
         }
     });
 
