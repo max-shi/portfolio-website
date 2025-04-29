@@ -21,257 +21,34 @@ document.addEventListener('DOMContentLoaded', function() {
     const fullscreenImage = document.getElementById('fullscreen-image');
     const closeFullscreen = document.getElementById('close-fullscreen');
     
-    // Project data
-    const projectData = {
-        'ai-helper': {
-            title: 'Ai Helper Application',
-            images: [
-                'images/projects/ai-helper-program/ai-helper-application-prompt-builder.png',
-                'images/projects/ai-helper-program/ai-helper-application-summary-creator.png',
-                'images/projects/ai-helper-program/ai-helper-application-summary-creator-compare.png'
-            ],
-            description: `
-                <div class="mb-6 project-gallery">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/ai-helper-program/ai-helper-application-prompt-builder.png" alt="Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ai-helper-program/ai-helper-application-summary-creator.png" alt="Dashboard" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/ai-helper-program/ai-helper-application-summary-creator-compare.png" alt="Checkout" class="w-full h-auto rounded-lg">
-                    </div>
-                </div>
-                <p class="mb-4">A comprehensive e-commerce solution built with modern web technologies.</p>
-                <ul class="list-disc pl-5 mb-4 space-y-2">
-                    <li>User authentication and profile management</li>
-                    <li>Product catalog with filtering and search</li>
-                    <li>Secure checkout process with multiple payment options</li>
-                </ul>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'portfolio': {
-            title: 'Portfolio Website',
-            images: [
-                'images/projects/portfolio/main.png',
-                'images/projects/portfolio/projects.png',
-                'images/projects/portfolio/contact.png'
-            ],
-            description: `
-                <div class="mb-6 project-gallery">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/portfolio/main.png" alt="Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/portfolio/projects.png" alt="Projects" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/portfolio/contact.png" alt="Contact" class="w-full h-auto rounded-lg">
-                    </div>
-                </div>
-                <p class="mb-4">A modern, responsive portfolio designed to showcase projects and skills.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'weather': {
-            title: 'Weather Dashboard',
-            images: [
-                'images/projects/weather/main.png',
-                'images/projects/weather/forecast.png',
-                'images/projects/weather/map.png'
-            ],
-            description: `
-                <div class="mb-6 project-gallery">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/weather/main.png" alt="Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/weather/forecast.png" alt="Forecast" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/weather/map.png" alt="Map" class="w-full h-auto rounded-lg">
-                    </div>
-                </div>
-                <p class="mb-4">Interactive weather app with 5-day forecasts and maps.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'task': {
-            title: 'Task Manager',
-            images: [
-                'images/projects/task/main.png',
-                'images/projects/task/board.png',
-                'images/projects/task/settings.png'
-            ],
-            description: `
-                <div class="mb-6 project-gallery">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        <img src="images/projects/task/main.png" alt="Main" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/task/board.png" alt="Board" class="w-full h-auto rounded-lg">
-                        <img src="images/projects/task/settings.png" alt="Settings" class="w-full h-auto rounded-lg">
-                    </div>
-                </div>
-                <p class="mb-4">A productivity app for managing tasks with drag-and-drop and theming.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        // Placeholder entries
-        'placeholder1': {
-            title: 'Placeholder Project 1',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 1.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder2': {
-            title: 'Placeholder Project 2',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 2.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder3': {
-            title: 'Placeholder Project 3',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 3.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder4': {
-            title: 'Placeholder Project 4',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 4.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder5': {
-            title: 'Placeholder Project 5',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 5.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder6': {
-            title: 'Placeholder Project 6',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 6.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        },
-        'placeholder7': {
-            title: 'Placeholder Project 7',
-            images: [
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png',
-                'images/projects/placeholder.png'
-            ],
-            description: `
-                <p class="mb-4">Description for placeholder project 7.</p>
-                <div class="mt-6 flex space-x-4">
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                    </a>
-                    <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                        <i class="fab fa-github mr-1"></i> Source Code
-                    </a>
-                </div>
-            `
-        }
+    // Project titles mapping
+    const projectTitles = {
+        'ai-helper': 'Ai Helper Application',
+        'portfolio': 'Portfolio Website',
+        'weather': 'Weather Dashboard',
+        'task': 'Task Manager',
+        'placeholder1': 'Placeholder Project 1',
+        'placeholder2': 'Placeholder Project 2',
+        'placeholder3': 'Placeholder Project 3',
+        'placeholder4': 'Placeholder Project 4',
+        'placeholder5': 'Placeholder Project 5',
+        'placeholder6': 'Placeholder Project 6',
+        'placeholder7': 'Placeholder Project 7'
     };
     
     function openModal(projectId) {
-        if (projectData[projectId]) {
-            modalTitle.textContent = projectData[projectId].title;
-            modalContent.innerHTML = projectData[projectId].description;
+        const templateId = `project-template-${projectId}`;
+        const template = document.getElementById(templateId);
+        
+        if (template) {
+            modalTitle.textContent = projectTitles[projectId] || projectId;
+            modalContent.innerHTML = '';
+            
+            // Clone the template content and append it to the modal
+            const content = template.content.cloneNode(true);
+            modalContent.appendChild(content);
+            
+            // Show the modal
             modalOverlay.classList.remove('hidden');
             modalOverlay.style.display = 'flex';
             document.body.style.overflow = 'hidden';
@@ -286,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }, 100); // Small timeout to ensure DOM is updated
         } else {
-            console.error('No project data for:', projectId);
+            console.error('No template found for project:', projectId);
         }
     }
 
