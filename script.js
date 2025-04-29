@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectTitles = {
         'ai-helper': 'Ai Helper Application',
         'portfolio': 'Portfolio Website',
-        'weather': 'Weather Dashboard',
-        'task': 'Task Manager',
+        'application-tracker': 'Application Tracker',
+        'opengl-conveyor-simulator': 'OpenGL Conveyor Simulator',
         'placeholder1': 'Placeholder Project 1',
         'placeholder2': 'Placeholder Project 2',
         'placeholder3': 'Placeholder Project 3',
