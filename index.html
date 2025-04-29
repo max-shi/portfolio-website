@@ -638,20 +638,27 @@
             </div>
         </template>
 
-        <!-- Placeholder Projects -->
-        <template id="project-template-placeholder1">
+        <!-- Application Tracker -->
+        <template id="project-template-application-tracker">
             <div class="mb-6 project-gallery">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    <img src="images/projects/placeholder.png" alt="Placeholder" class="w-full h-auto rounded-lg">
-                    <img src="images/projects/placeholder.png" alt="Placeholder" class="w-full h-auto rounded-lg">
-                    <img src="images/projects/placeholder.png" alt="Placeholder" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/application-tracker/main-view.png" alt="Main View" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/application-tracker/calendar-view.png" alt="Calendar View" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/application-tracker/heatmap-view.png" alt="Heatmap View" class="w-full h-auto rounded-lg">
                 </div>
             </div>
-            <p class="mb-4">Description for placeholder project 1.</p>
+            <h3 class="text-xl font-bold mb-2">Application Tracker (2024)</h3>
+            <p class="text-gray-light mb-4">C++, ImGui, OpenGL, SQLite, Win32 API</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Comprehensive desktop activity monitoring application built with C++ and ImGui, providing a detailed analysis of computer usage patterns. Features a clean graphical interface using OpenGL for rendering and visualization components.</li>
+                <li>Users can track active window sessions automatically, with the application recording process names, window titles, and precise timestamps for all computer activity. Idle detection automatically pauses tracking after 5 minutes of inactivity.</li>
+                <li>Includes multiple visualization tools like pie charts showing application usage distribution and heat maps displaying hourly activity patterns throughout the day.</li>
+                <li>Provides a calendar interface allowing users to navigate through historical data and analyze usage patterns across different time periods.</li>
+                <li>Features application categorization capabilities to group similar applications together for better analysis of time spent on different types of activities.</li>
+                <li>Implements persistent SQLite database storage to maintain a complete history of computer usage, storing data in an efficient format using Julian day numbers to avoid timezone issues.</li>
+                <li>Supports detailed reporting with time-based filtering, allowing users to view statistics for specific date ranges or compare usage patterns across different days.</li>
+            </ul>
             <div class="mt-6 flex space-x-4">
-                <a href="#" class="text-accent hover:text-accent-light transition duration-300">
-                    <i class="fas fa-external-link-alt mr-1"></i> Live Demo
-                </a>
                 <a href="#" class="text-accent hover:text-accent-light transition duration-300">
                     <i class="fab fa-github mr-1"></i> Source Code
                 </a>
@@ -688,7 +695,6 @@
                 </a>
             </div>
         </template>
-
 
         <template id="project-template-placeholder3">
             <div class="mb-6 project-gallery">
