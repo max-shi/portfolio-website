@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Max Shi - Portfolio</title>
     <!-- Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom configuration for Tailwind -->
@@ -28,20 +28,18 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* always visible, with a gentle lift & color shift on hover */
         .tech-name {
           opacity: 1;
           transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
         }
         .tech-item:hover .tech-name {
           transform: translateY(-2px) scale(1.05);
-          color: #A78BFA; /* accent-light */
+          color: #A78BFA;
         }
       </style>
       
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script>
-      // 2. Initialize EmailJS with your user ID
       (function(){
         emailjs.init('xws9yb9xb3lAE-LnK');
       })();
@@ -628,7 +626,7 @@
                 <li>Real-time 3D factory scene simulation built in C++ using OpenGL's fixed-function pipeline and FreeGLUT for cross-platform windowing and input.</li>
                 <li>Configures ambient, diffuse, and specular lighting with depth testing and perspective projection (glFrustum) for an immersive industrial environment.</li>
                 <li>Animated conveyor belt with continuous offset, rotating rollers, and looping via modulo arithmetic to simulate an endless production line; belt speed adjustable via keyboard controls.</li>
-                <li>Modular rendering of factory components—springs, presses, silos, kilns, packers, and skybox—each textured with TGA-loaded materials (concrete, metal, brick).</li>
+                <li>Modular rendering of factory components including springs, presses, silos, kilns, packers, and skybox. Each textured with TGA-loaded materials (concrete, metal, brick).</li>
                 <li>High-performance particle system for sparks and fire effects: particles follow gravity, bounce on collision, fade on expiry, with proximity-triggered sparks and randomized fire-blaster emissions.</li>
                 <li>Real-time shadow projection computed per frame against the ground plane to render semi-transparent silhouettes, simulating shadows without shader code.</li>
                 <li>Interactive camera and simulation controls: WASD + arrow keys for movement and look, toggle wireframe mode, and adjust belt parameters on the fly.</li>
@@ -657,7 +655,7 @@
                 <li>Utilizes UCFK4-specific drivers for interfacing with hardware: IR transceivers, LED matrix display, and Navswitch input.</li>
                 <li>Renders ball, paddles, and win/loss status directly onto the 5x7 LED matrix displays.</li>
                 <li>Modular design with separate C modules for game logic, ball/paddle mechanics, collision detection, and IR communication.</li>
-                <li>Includes a Makefile for streamlined building and deployment using the avr-gcc toolchain on the UCFK4 platform.</li>
+                <li>Includes a Makefile for streamlined building and deployment using the avr-gcc toolchain on the UCFK4.</li>
             </ul>
             <div class="mt-6 flex space-x-4">
                 <a href="https://github.com/max-shi/UCFK4-PONG" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
@@ -677,7 +675,7 @@
                     <img src="images/projects/uncorked/uncorked-my-wines.png" alt="Settings" class="w-full h-auto rounded-lg">
                 </div>
             </div>
-            <h3 class="text-xl font-bold mb-2">UnCorked - Wine Discovery & Management App (2024)</h3>
+            <h3 class="text-xl font-bold mb-2">Wine Discovery & Management App (2024)</h3>
             <p class="text-gray-light mb-4">Java, JavaFX</p>
             <ul class="list-disc pl-5 mb-4 space-y-2">
               <li>Explore a large default wine database or import your own via CSV files.</li>
