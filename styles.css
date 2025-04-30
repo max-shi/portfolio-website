@@ -28,14 +28,24 @@ html {
     border-radius: 1px;
 }
 
-/* Tech items hover effect */
+/* Tech items hover effect (swap out your existing block) */
 .tech-item {
-    transition: transform 0.3s ease;
-}
-
-.tech-item:hover {
-    transform: translateY(-5px);
-}
+    will-change: transform, box-shadow;
+    cursor: pointer;
+  }
+  
+  /* And for the label itself, a tiny uplift + bounce */
+  .tech-name {
+    opacity: 1;
+    transform-origin: center bottom;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .tech-item:hover .tech-name {
+    transform: translateY(-4px) scale(1.1);
+    color: #A78BFA; /* your accent-light */
+  }
+  
 
 /* Project card hover effect */
 .project-card {

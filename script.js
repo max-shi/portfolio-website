@@ -213,3 +213,37 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 });
+
+// 3D tilt & pop for tech items
+document.querySelectorAll('.tech-item').forEach(item => {
+    // ensure smooth transitions
+    item.style.transformStyle = 'preserve-3d';
+    item.style.transition = 'transform 0.2s ease, box-shadow 0.2s ease';
+  
+    item.addEventListener('pointermove', e => {
+      const { left, top, width, height } = item.getBoundingClientRect();
+      const x = (e.clientX - left) / width - 0.5;   // −0.5 → 0.5
+      const y = (e.clientY - top) / height - 0.5;   // −0.5 → 0.5
+      const tiltX = y * 15;  // adjust for more/less tilt
+      const tiltY = x * -15;
+      item.style.transform = `
+        perspective(600px)
+        rotateX(${tiltX}deg)
+        rotateY(${tiltY}deg)
+        scale(1.1)
+      `;
+    });
+  
+    item.addEventListener('pointerenter', () => {
+      // pop in quickly
+      item.style.transition = 'transform 0.1s ease-out, box-shadow 0.1s ease-out';
+    });
+  
+    item.addEventListener('pointerleave', () => {
+      // reset back
+      item.style.transition = 'transform 0.5s cubic-bezier(0.22,1,0.36,1), box-shadow 0.5s ease-out';
+      item.style.transform = 'perspective(600px) rotateX(0) rotateY(0) scale(1)';
+      item.style.boxShadow = '';
+    });
+  });
+  
