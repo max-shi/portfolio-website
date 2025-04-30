@@ -35,7 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         'placeholder6': 'Placeholder Project 6',
         'placeholder7': 'Placeholder Project 7',
         'uncorked': 'UnCorked',
-        'ucfk4-pong': 'UCFK4 Pong'
+        'ucfk4-pong': 'UCFK4 Pong',
+        'api-server' : 'Game Review Site Backend',
+        'treasure-thieves' : 'Treasure Thieves'
     };
     
     function openModal(projectId) {
