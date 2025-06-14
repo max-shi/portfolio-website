@@ -384,6 +384,27 @@
                             </div>
                         </div>
                     </div>
+                    <!-- API Server Frontend -->
+                    <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="api-server-frontend">
+                        <img src="images/projects/api-server-frontend/game_api_frontend_1.jpg" alt="API Server" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Game Review Site Frontend</h3>
+                            <p class="text-gray-light mb-4">Provides a robust frontend API server designed for a game review website</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">TypeScript</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">React</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">Node.js</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/max-shi/game-api-frontend" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fab fa-github mr-1"></i> Source Code
+                                </a>
+                                <button class="view-details text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fas fa-info-circle mr-1"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Treasure Thieves -->
                     <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="treasure-thieves">
                         <img src="images/projects/treasure-thieves/treasure-thieves-game-round-1.png" alt="Treasure Thieves" class="w-full h-48 object-cover">
@@ -668,6 +689,34 @@
             </ul>
             <div class="mt-6 flex space-x-4">
                 <a href="https://github.com/max-shi/game-api-server" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                    <i class="fab fa-github mr-1"></i> Source Code
+                </a>
+            </div>
+        </template>
+
+        <!-- Max's Game Site -->
+        <template id="project-template-api-server-frontend">
+            <div class="mb-6 project-gallery">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <img src="images/projects/api-server-frontend/game_api_frontend_1.jpg" alt="Max's Game Site" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/api-server-frontend/game_api_frontend_2.jpg" alt="Max's Game Site" class="w-full h-auto rounded-lg">
+                    <!-- Add more images or videos if available -->
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Max's Game Site (2024)</h3>
+            <p class="text-gray-light mb-4">React, TypeScript, Zustand, Axios, Tailwind CSS, Radix UI</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>A modern, feature-rich web application for game enthusiasts to discover, track, and review video games across multiple platforms. Built with React and TypeScript, it offers a responsive and intuitive user interface styled with Tailwind CSS and enhanced with Radix UI components.</li>
+                <li>Users can browse an extensive catalog of games with powerful filtering capabilities by genre, platform, price range, and more. The application implements a comprehensive search functionality with multiple sorting options to help users find games that match their specific interests.</li>
+                <li>Features a robust user authentication system allowing personalized experiences, including game wishlisting and ownership tracking. Users can maintain their own collection of owned games and create wishlists for future purchases.</li>
+                <li>The detailed game pages provide comprehensive information including descriptions, pricing, user ratings, and platform availability. Users can leave their own ratings and written reviews to share their gaming experiences with the community.</li>
+                <li>Includes a game creation and management system for authorized users to add new titles to the database, complete with image upload functionality. Game creators can update game details or remove listings as needed.</li>
+                <li>Implements a responsive user profile system where users can view and edit their personal information and upload profile images, enhancing the community aspect of the platform.</li>
+                <li>Utilizes Zustand for efficient state management across the application, providing a seamless and reactive user experience. All data is persisted through RESTful API calls using Axios, with proper authentication token handling for secure operations.</li>
+                <li>The application's architecture follows modern frontend best practices with separate concerns for API interactions, state management, and UI components, making it highly maintainable and extensible.</li>
+            </ul>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/max-shi/game-api-frontend" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
                     <i class="fab fa-github mr-1"></i> Source Code
                 </a>
             </div>

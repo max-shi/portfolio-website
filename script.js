@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'uncorked': 'UnCorked',
         'ucfk4-pong': 'UCFK4 Pong',
         'api-server' : 'Game Review Site Backend',
+        'api-server-frontend' : 'Game Review Site Frontend',
         'treasure-thieves' : 'Treasure Thieves'
     };
     
