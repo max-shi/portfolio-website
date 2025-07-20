@@ -287,6 +287,27 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Unity Ray Tracer -->
+                    <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="unity-ray-tracer">
+                        <img src="images/projects/unity-ray-tracer/unity-ray-tracer-main.png" alt="Unity Ray Tracer" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Unity Ray Tracer</h3>
+                            <p class="text-gray-light mb-4">Custom ray/path tracing renderer featuring advanced mathematical modeling and shader programming.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">C#</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">HLSL</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">Unity</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a class="text-accent opacity-50 cursor-not-allowed pointer-events-none" title="Source code coming soon!">
+                                    <i class="fab fa-github mr-1"></i> Source Code
+                                </a>
+                                <button class="view-details text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fas fa-info-circle mr-1"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -779,6 +800,33 @@
             </ul>
             <div class="mt-6 flex space-x-4">
                 <a href="https://github.com/max-shi/TreasureThieves" target="_blank" class="text-accent hover:text-accent-light transition duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
+            </div>
+        </template>
+
+        <!-- Unity Ray Tracer -->
+        <template id="project-template-unity-ray-tracer">
+            <div class="mb-6 project-gallery">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <img src="images/projects/unity-ray-tracer/unity-ray-tracer-main.png" alt="Unity Ray Tracer Main Scene" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/unity-ray-tracer/unity-ray-tracer-2.png" alt="Another Scene" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/unity-ray-tracer/unity-ray-tracer-3.png" alt="Complex Scene Rendering" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Unity Ray Tracer (2024)</h3>
+            <p class="text-gray-light mb-4">C#, HLSL, Unity</p>
+            <p class="mb-4">A custom ray/path tracing renderer built in Unity, exploring advanced rendering techniques and shader programming.</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Developed a custom ray tracing system from scratch using C# and HLSL shader programming.</li>
+                <li>Implemented physically-based rendering techniques including global illumination, reflections, and realistic material properties.</li>
+                <li>Created a path tracing algorithm that simulates light bounces for photorealistic rendering results.</li>
+                <li>Designed efficient acceleration structures to optimize ray-scene intersection calculations.</li>
+                <li>Implemented sampling methods for noise reduction and improved render quality.</li>
+                <li>Built a custom material system supporting various surface properties including diffuse, metallic, and emissive materials.</li>
+                <li>Integrated the ray tracer with Unity's existing rendering pipeline for hybrid rendering approaches.</li>
+                <li>Integrates Accumation Shaders for better rendering</li>
+            </ul>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/max-shi/unity-ray-tracer" target="_blank" class="text-accent hover:text-accent-light transition duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
             </div>
         </template>
 
