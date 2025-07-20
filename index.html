@@ -315,6 +315,27 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Ray Tracer -->
+                    <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="ray-tracer">
+                        <img src="images/projects/ray-tracer/ray-tracer-main.png" alt="Ray Tracer" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">3D Ray Tracer</h3>
+                            <p class="text-gray-light mb-4">Advanced 3D rendering system with realistic lighting, reflections, and complex object support.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">C++</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">OpenGL</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">CMake</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/max-shi/ray-tracer" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fab fa-github mr-1"></i> Source Code
+                                </a>
+                                <button class="view-details text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fas fa-info-circle mr-1"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- OpenGL Conveyor Simulator -->
                     <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="opengl-conveyor-simulator">
                         <img src="images/projects/opengl-conveyor-simulator/OpenGL-conveyor-simulator-fire-blaster.png" alt="OpenGL Conveyor Simulator" class="w-full h-48 object-cover">
@@ -436,7 +457,7 @@
                     </div>
                 </div>
             </div>
-
+        
         </div>
     </section>
 
@@ -758,6 +779,35 @@
             </ul>
             <div class="mt-6 flex space-x-4">
                 <a href="https://github.com/max-shi/TreasureThieves" target="_blank" class="text-accent hover:text-accent-light transition duration-300"><i class="fab fa-github mr-1"></i> Source Code</a>
+            </div>
+        </template>
+
+        <!-- Ray Tracer -->
+        <template id="project-template-ray-tracer">
+            <div class="mb-6 project-gallery">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <img src="images/projects/ray-tracer/ray-tracer-main.png" alt="Ray Tracer Main Scene" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/ray-tracer/ray-tracer-anti.png" alt="Anti-Aliasing Comparison" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/ray-tracer/ray-tracer-not-anti.png" alt="Soft Shadows Comparison" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">3D Ray Tracer (2023)</h3>
+            <p class="text-gray-light mb-4">C++, OpenGL, CMake</p>
+            <p class="mb-4">A comprehensive 3D rendering system implementing a ray-tracing algorithm that simulates various physical phenomena and advanced rendering techniques.</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Implemented core ray-tracing features including reflection, refraction, and shadow calculation for realistic 3D scene rendering.</li>
+                <li>Developed advanced rendering techniques such as stochastic sampling (soft shadows) and adaptive anti-aliasing for improved visual quality.</li>
+                <li>Created complex geometric primitives including tori, cylinders with visible caps, and refractive spheres with accurate mathematical modeling.</li>
+                <li>Engineered object-space transformations using 4x4 matrices for translation, scaling, and rotation of scene objects.</li>
+                <li>Implemented texture mapping for cylinders using UV coordinate calculations for enhanced visual detail.</li>
+                <li>Utilized the Durand-Kerner method to solve quartic equations for accurate ray-torus intersections.</li>
+                <li>Optimized performance with bounding box checks and adaptive sampling techniques to reduce computation time.</li>
+                <li>Built with C++ and OpenGL, with CMake for cross-platform compatibility between Windows and Linux environments.</li>
+            </ul>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/max-shi/ray-tracer" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                    <i class="fab fa-github mr-1"></i> Source Code
+                </a>
             </div>
         </template>
     </div>

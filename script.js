@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'ucfk4-pong': 'UCFK4 Pong',
         'api-server' : 'Game Review Site Backend',
         'api-server-frontend' : 'Game Review Site Frontend',
-        'treasure-thieves' : 'Treasure Thieves'
+        'treasure-thieves' : 'Treasure Thieves',
+        'ray-tracer': '3D Ray Tracer'
     };
     
     function openModal(projectId) {
