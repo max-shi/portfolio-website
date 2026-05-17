@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'api-server-frontend' : 'Game Review Site Frontend',
         'treasure-thieves' : 'Treasure Thieves',
         'ray-tracer': '3D Ray Tracer',
-        'unity-ray-tracer': 'Unity Ray Tracer'
+        'unity-ray-tracer': 'Unity Ray Tracer',
+        'piano-posture': 'Piano Posture'
     };
     
     function openModal(projectId) {

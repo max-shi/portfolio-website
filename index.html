@@ -315,6 +315,28 @@
             <div>
                 <h3 class="text-2xl font-semibold mb-6 text-center">Completed Projects</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Piano Posture -->
+                    <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="piano-posture">
+                        <img src="images/projects/piano-posture/piano-posture-comparison.png" alt="Piano Posture" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2">Piano Posture</h3>
+                            <p class="text-gray-light mb-4">Vision-based assessment of right-hand piano posture from a single monocular RGB camera using hand-landmark detection.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">MediaPipe</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">OpenCV</span>
+                                <span class="bg-dark px-3 py-1 rounded-full text-sm">NumPy</span>
+                            </div>
+                            <div class="flex space-x-4">
+                                <a href="https://github.com/max-shi/piano-posture" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fab fa-github mr-1"></i> Source Code
+                                </a>
+                                <button class="view-details text-accent hover:text-accent-light transition duration-300">
+                                    <i class="fas fa-info-circle mr-1"></i> Details
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Application Tracker -->
                     <div class="project-card bg-gray-dark rounded-lg overflow-hidden" data-project-id="application-tracker">
                         <img src="images/projects/application-tracker/application-tracker-full-view.png" alt="Application Tracker" class="w-full h-48 object-cover">
@@ -521,6 +543,34 @@
 
     <!-- Project Modal Templates -->
     <div class="hidden">
+        <!-- Piano Posture -->
+        <template id="project-template-piano-posture">
+            <div class="mb-6 project-gallery">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <img src="images/projects/piano-posture/piano-posture-comparison.png" alt="Overlay frames for three representative posture conditions" class="w-full h-auto rounded-lg">
+                    <img src="images/projects/piano-posture/piano-posture-handlandmarks.png" alt="21-point MediaPipe hand landmark skeleton" class="w-full h-auto rounded-lg">
+                </div>
+            </div>
+            <h3 class="text-xl font-bold mb-2">Vision-Based Assessment of Right-Hand Piano Posture (2026)</h3>
+            <p class="text-gray-light mb-4">Python, MediaPipe Hands, OpenCV, NumPy</p>
+            <ul class="list-disc pl-5 mb-4 space-y-2">
+                <li>Research project asking whether a single webcam, mounted in a diagonal front view above the keyboard, can give a pianist meaningful feedback on their right-hand posture without any depth sensor or specialised hardware.</li>
+                <li>Each frame is run through MediaPipe Hands (the 21-point skeleton in the second image) to pull out per-finger PIP and DIP angles, wrist pitch, the mean MCP arch angle, and a normalised openness metric Ω.</li>
+                <li>Those features are mapped into discrete labels: <em>curved</em>, <em>flat</em>, <em>collapsed</em>, or <em>neutral</em> for each finger, <em>low</em>, <em>neutral</em>, or <em>high</em> for the wrist, and <em>good</em>, <em>collapsed</em>, or <em>excessive</em> for the hand arch.</li>
+                <li>A weighted rule-based classifier folds the labels into a single 0 to 100 posture score, so the output is interpretable instead of being a black-box number.</li>
+                <li>Added a closed-hand override driven by the openness metric to stop the score being inflated when the fingertips are hidden in postures like <em>on nails</em> or <em>on knuckles</em>.</li>
+                <li>Tested across six controlled posture conditions. Good posture averaged 80.2, while low wrist, flat hand, and high wrist sat between 28.4 and 52.0, which is a wide enough gap to be useful as tutoring feedback.</li>
+                <li>The first image is an overlay from three representative conditions: good posture on the left, very bent / on nails in the middle, and on knuckles on the right. It also shows the main failure mode of RGB only analysis, where the landmark estimator returns plausible DIP/TIP positions even when those joints are occluded, so the score can swing between roughly 20 and 100 unless the closed-hand override fires.</li>
+                <li>Discusses the limits of RGB-only distal joint estimation under heavy self-occlusion and suggests next steps like multi-subject validation, temporal smoothing, and an optional lightweight depth sensor.</li>
+                <li>Written up as an IEEE-format research paper supervised by Prof. Richard Green at the University of Canterbury.</li>
+            </ul>
+            <div class="mt-6 flex space-x-4">
+                <a href="https://github.com/max-shi/piano-posture" target="_blank" class="text-accent hover:text-accent-light transition duration-300">
+                    <i class="fab fa-github mr-1"></i> Source Code
+                </a>
+            </div>
+        </template>
+
         <!-- AI Helper Application -->
         <template id="project-template-ai-helper">
             <div class="mb-6 project-gallery">
